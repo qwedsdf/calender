@@ -15,6 +15,8 @@
 	// 	exit;
 	// }
 	// mysqli_set_charset($db,'utf8');
+
+//接続テスト
 	$ini = parse_ini_file('./db.ini', FALSE);
 	$db=mysqli_connect($ini['host'],$ini['dbuser'],$ini['dbpass'],$ini['dbname']) or die(mysqli_connect_error());
 	mysqli_set_charset($db,'utf8');
