@@ -1,0 +1,70 @@
+.buttons{
+	width: 80%;
+	padding: 10px 0;
+	margin: 20px auto;
+	display: flex;
+	justify-content:space-around;
+}
+
+.login-modal-wrapper{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.login-modal{
+	position: relative;
+	width: 80%;
+	max-width: 700px;
+	height: 500px;
+	margin:100px auto 0 auto;
+	border-radius: 4px;
+	background-color: #e6ecf0;
+	text-align: center;
+}
+
+.btn{
+	color: black;
+	cursor:pointer;
+	border: 1px solid #000000; 
+	border-radius: 4px;
+	width: 150px;
+	padding:10px;
+	margin: 10px 10px 10px 0; 
+	font-size: 30px;
+}
+
+.input-title{
+	text-align: left;
+	margin: 0 0;
+	font-size: 30px;
+}
+
+.input-block{
+	padding: 10px 0;
+	margin: 0 auto;
+	font-size: 30px;
+	width: 80%;
+}
+
+.input-text{
+	width: 100%;
+	font-size: 25px;
+	padding: 10px;
+	border: 1.5px solid darkgray;
+}
+
+.warning{
+	color: red;
+	font-size: 20px;
+}
+
+#sign-up{
+	background-color: seagreen;
+}
+
+#login{
+	background-color: royalblue;
+}

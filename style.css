@@ -1,0 +1,179 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+header{
+  background-color: rgba(0,0,0,0.7);
+}
+
+body{
+	background-image: url("http://igarashiblog.com/images/back-img2.jpg");
+	background-size:cover;
+}
+
+.title-text{
+	text-align: left;
+	color: #b0c4de;
+}
+
+#title-logo{
+	color: white;
+	text-shadow: 3px 3px 5px royalblue;
+	padding:10px 30px; 
+	font-size: 40px;
+}
+
+.container{
+	width: 100%;
+	max-width: 1170px;
+ 	padding: 0 15px;
+ 	margin: 0 auto;
+ 	background-color: pink;
+}
+
+.YearMonth{
+
+}
+
+.calendar-table{
+	margin: 10px auto;
+}
+
+.YearMonth h2{
+	font-size: 40px;
+	margin:30px 0 30px 50px; 
+	text-align: left;
+}
+
+.calendar-table span{
+}
+
+#sunday{
+	color: red;
+}
+
+#saturday{
+	color: royalblue;
+}
+
+.day{
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.action{
+	font-size: 15px;
+}
+
+.calendar-table th{
+	padding: 20px 0;
+	font-size: 40px;
+}
+
+.btn{
+	position: static;
+	width : 200px; 
+	min-height: 100px;
+	display: inline-block;
+	cursor:pointer;
+	opacity: 0.7;
+	border-radius: 4px;
+	background-color: white;
+	border: 3px solid #000;
+}
+
+.btn:hover{
+	border: 3px solid yellow;	
+}
+
+.btn h3{
+	position: relative;
+	left:5px;
+	font-size: 20px;
+}
+
+.modal-wrapper{
+	position: fixed;
+	background-color: red;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 100;
+
+	display: none;
+}
+
+.modal{
+	position: relative;
+	width: 700px;
+	height: 500px;
+	margin:100px auto 0 auto;
+	border-radius: 4px;
+	background-color: #e6ecf0;
+}
+
+.modal h2{
+	padding: 10px 0;
+	font-size: 40px;
+	text-align: center;
+}
+
+.input-form{
+	text-align: center;
+}
+
+#close-btn{
+	cursor:pointer;
+	position: absolute;
+	right: 2%;
+}
+
+#content-text{
+	width: 80%;
+	height: 250px;
+	margin:10px 0;
+	border-radius: 4px;
+	padding:30px;
+
+	font-size: 30px;
+}
+
+.send-btn{
+	text-align: left;
+	display: inline-block;
+	color: black;
+	cursor:pointer;
+	border: 1px solid #000000; 
+	border-radius: 4px;
+	padding:5px 5px; 
+	font-size: auto;
+}
+
+#tweet-btn{
+	position: absolute;
+	background-color: #55acee;
+	color: white;
+	top:90%;
+	left: 10%;
+}
+
+#save-btn{
+	background-color: white;
+	position: absolute;
+	top:90%;
+	right:10%;	
+}
+
+.day-content{
+	padding-left: 10px;
+	font-size: 15px;
+}
+
+.save{
+
+}
+/*# sourceMappingURL=style.css.map */
