@@ -24,6 +24,9 @@
 	$result = mysqli_query($db,'SELECT * FROM contents WHERE userId = 102 AND inputdate = "'.$_POST['date'].'"') or die(mysqli_error($db));
 
 	$data = mysqli_fetch_assoc($result);
+	if(is_null($data)){
+		return;
+	}
 	$content = $data['content'];
-	echo $data['content'];
+	echo $content;
 ?>
