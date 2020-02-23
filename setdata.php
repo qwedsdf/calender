@@ -1,6 +1,7 @@
 <?php
-	$db=mysqli_connect('localhost','root','','calender') or die(mysqli_connect_error());
-	mysqli_set_charset($db,'utf8');
+require_once('Initialize.php');
 
-	mysqli_query($db,'INSERT INTO contents (inputdate, content, userId) VALUES ("'.$_POST['date'].'", "'.$_POST['content'].'", '.$_POST['userId'].') ON DUPLICATE KEY UPDATE content = VALUES (content)');
+$id = $_COOKIE['userId'];
+
+mysqli_query($db,'INSERT INTO contents (inputdate, content, userId) VALUES ("'.$_POST['date'].'", "'.$_POST['content'].'", '.$id.') ON DUPLICATE KEY UPDATE content = VALUES (content)');
 ?>

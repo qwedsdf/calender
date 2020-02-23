@@ -1,10 +1,14 @@
 <?php
 class UserData
 {
-	private $userId;
+	private $userId = 0;
 
 	public function SetUserId($id){
 		$this->userId = $id;
+	}
+
+	public function GetUserId(){
+		return $this->userId;
 	}
 }
 

@@ -51,7 +51,6 @@ $(function(){
 			data: {
 				'date':selectDay,
 				'content':value,
-				'userId':dummyUserId,
 			},
 		});
 	});
@@ -67,17 +66,9 @@ $(function(){
 			async:false,
 			data: {
 				'date':date,
-				'userId':dummyUserId,
 			},
 
 		});
-
-		
-		var result = "aiueo0";
-
-		
-
-		return result;
 	}
 
 	function setUserAction(date,content){
