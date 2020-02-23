@@ -1,9 +1,10 @@
 <?php
-class UserData(){
+class UserData
+{
 	private $userId;
 
-	public function SetUserId(id){
-		$this->userId = id;
+	public function SetUserId($id){
+		$this->userId = $id;
 	}
 }
 
