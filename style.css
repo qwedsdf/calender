@@ -26,17 +26,13 @@ body{
 	font-size: 40px;
 }
 
-.container{
+/* .container{
 	width: 100%;
 	max-width: 1170px;
  	padding: 0 15px;
  	margin: 0 auto;
  	background-color: pink;
-}
-
-.YearMonth{
-
-}
+} */
 
 .calendar-table{
 	margin: 10px auto;
@@ -48,8 +44,6 @@ body{
 	text-align: left;
 }
 
-.calendar-table span{
-}
 
 #sunday{
 	color: red;
@@ -174,7 +168,4 @@ body{
 	font-size: 15px;
 }
 
-.save{
-
-}
 /*# sourceMappingURL=style.css.map */

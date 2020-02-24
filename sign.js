@@ -9,7 +9,7 @@ $(function(){
 	});
 
 	// ログイン
-	$("#login").click(function(){
+	$("#login").click(function () {
 		var name = $('input[name="userName"]').val();
 		var pass = $('input[name="password"]').val();
 		Login(name,pass);
