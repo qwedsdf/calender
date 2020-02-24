@@ -51,14 +51,18 @@ $(function(){
 		$.ajax({
 			type: "POST",
 			url: "http://localhost/calender/login.php",
-			dataType:'json',
+			dataType: 'json',
 			data: {
-				'name':name,
-				'password':pass,
+				'name': name,
+				'password': pass,
 			},
-			success:function(data){
-				if(data.status == 1){
+			success: function (data) {
+				if (data.status == 1) {
 					MoveMain();
+					return;
+				}
+				if (data.status == 2) {
+					$('.warning').css('color','rgba(255, 51, 51, 1)');
 				}
 			},
 		});
