@@ -1,6 +1,4 @@
 $(function(){
-	var calenderUrl = "http://localhost/calender/main.html";
-
 	// ユーザー登録
 	$("#sign-up").click(function(){
 		var name = $('input[name="userName"]').val();
@@ -73,5 +71,23 @@ $(function(){
 
 	function WriteWarning(word) {
 		$('.warning').text(word).css('color','rgba(255, 51, 51, 1)');
+	}
+
+	function Cryotico() {
+		
+	}
+
+	function GetRSAKey() {
+		// RSA鍵作成
+		var passPhrase = "yamAdaMatUmototaNaKA";
+		var bits = 1024;
+		var RSAkey = cryptico.generateRSAKey(passPhrase, bits);
+		return RSAkey;
+	}
+
+	function GetPublicKey(RSAKey) {
+		// 公開鍵作成
+		var publicKeyString = Cryotico.publicKeyString(RSAkey);
+		return publicKeyString;
 	}
 });
