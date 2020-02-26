@@ -101,7 +101,7 @@ $(function(){
 				getuserActionApi(dateId).done(function (result){
 					text = result.replace(/\n/g,"<br>\n");
 				})
-				var frontSpanTag = (textTd === '') ? '<span><h3>':'<span id = ' + dateId + ' class="btn"><h3>';
+				var frontSpanTag = (textTd === '') ? '<span><h3>':'<span id = ' + dateId + ' class="btn-calender"><h3>';
 				var backSpanTag = (textTd === '') ? '</h3></span>':'</h3><div class="day-content">'+text+'</div></span>';
 				var td = '<td>' + frontSpanTag + textTd + backSpanTag;
 				tr += td;

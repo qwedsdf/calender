@@ -1,6 +1,6 @@
 * {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
 
 
@@ -39,14 +39,6 @@ body{
 	margin: 10px auto;
 }
 
-th{
-	width: 14%;
-}
-
-td{
-	width: 14%;
-}
-
 .table-wrapper{
 	width: 100%;
 }
@@ -81,16 +73,21 @@ td{
 }
 
 .calendar-table th{
-	padding: 20px 0;
 	font-size: 40px;
+	text-align: center;
+	width:12%;
 }
 
-.btn{
+.calendar-table td{
+	width:12%;
+}
+
+.btn-calender{
 	position: static;
 	width : 100%;
 	min-height: 100px;
 	max-height: 200px;
-	display: inline-block;
+	display: block;
 	cursor:pointer;
 	opacity: 0.7;
 	border-radius: 4px;
@@ -98,11 +95,11 @@ td{
 	border: 1px solid #000;
 }
 
-.btn:hover{
+.btn-calender:hover{
 	border: 1px solid yellow;	
 }
 
-.btn h3{
+.btn-calender h3{
 	position: relative;
 	left:5px;
 	font-size: 20px;
@@ -185,6 +182,20 @@ td{
 .day-content{
 	padding-left: 10px;
 	font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+
+	.calendar-table th{
+		display: none;
+	}
+
+	
+	.calendar-table td{
+		display: block;
+		width:80%;
+		margin: 5px auto;
+	}
 }
 
 /*# sourceMappingURL=style.css.map */

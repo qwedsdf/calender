@@ -4,8 +4,10 @@ require_once('Initialize.php');
 final class Status{
 	const NONE = 0;
 	const SUCCESS = 1;
-	const NOTFOUND = 2;
+	const FAILURE = 2;
 }
+
+const MIN_PASS_LENGTH = 8;
 
 function GetResponseData($message,$status){
 	$resultArray = [
@@ -15,14 +17,29 @@ function GetResponseData($message,$status){
 	return json_encode($resultArray);
 }
 
-
+// 入力値が空じゃないかどうか
 if(empty($_POST['name'])||empty($_POST['password'])){
-	echo "未入力の項目があります。";
+	echo GetResponseData("未入力の項目があります。",Status::FAILURE);
 	exit;
 }
 
-if(!preg_match("/^[a-zA-Z0-9]+$/", $_POST['name'])){
-	echo "名前は半角英数字のみ";
+// 英数字チェック
+if(!preg_match("/^[a-zA-Z0-9]+$/", $_POST['name'])||
+!preg_match("/^[a-zA-Z0-9]+$/", $_POST['password'])){
+	echo GetResponseData("入力は英数字のみ。",Status::FAILURE);
+	exit;
+}
+
+// パスワードの文字数チェック
+if(strlen($_POST['password']) < MIN_PASS_LENGTH){
+	echo GetResponseData("パスワードの文字数が足りません",Status::FAILURE);
+	exit;
+}
+
+$result = mysqli_query($db,'SELECT id FROM user WHERE name="'.$_POST['name'].'" AND password="'.$_POST['password'].'"');
+$row = mysqli_num_rows($result);
+if($row == 1){
+	echo GetResponseData("すでに登録されています",Status::FAILURE);
 	exit;
 }
 

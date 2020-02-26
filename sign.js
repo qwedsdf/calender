@@ -22,7 +22,8 @@ $(function(){
 	}
 
 	// ユーザー登録
-	function SetUserData(name,pass){
+	function SetUserData(name, pass) {
+		
 		$.ajax({
 			type: "POST",
 			url: "http://localhost/calender/signUp.php",
@@ -32,22 +33,23 @@ $(function(){
 				'password':pass,
 			},
 			success:function(data){
-				alert("成功");
-				if(data.status == 1){
+				if (data.status == 1) {
 					MoveMain();
+					return;
+				}
+				if (data.status == 2) {
+					WriteWarning(data.message);
+					return;
 				}
 			},
 			error:function(data){
-				alert("失敗");
-				if(data.status == 1){
-					MoveMain();
-				}
+				alert("通信に失敗");
 			}
 		});
 	}
 
 	// ログイン
-	function Login(name,pass){
+	function Login(name, pass) {
 		$.ajax({
 			type: "POST",
 			url: "http://localhost/calender/login.php",
@@ -62,9 +64,14 @@ $(function(){
 					return;
 				}
 				if (data.status == 2) {
-					$('.warning').css('color','rgba(255, 51, 51, 1)');
+					WriteWarning(data.message);
+					return;
 				}
 			},
 		});
+	}
+
+	function WriteWarning(word) {
+		$('.warning').text(word).css('color','rgba(255, 51, 51, 1)');
 	}
 });
