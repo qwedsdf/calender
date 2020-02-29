@@ -1,4 +1,9 @@
 <?php
+	// define('DB_HOST', 'mysql8039.xserver.jp');
+	// define('DB_NAME', 'blog0112_calender');
+	// define('DB_USER', 'blog0112_yoha');
+	// define('DB_PASSWORD', 'mituki51031');
+
 	define('DB_HOST', 'localhost');
 	define('DB_NAME', 'calender');
 	define('DB_USER', 'root');

@@ -73,8 +73,13 @@ $(function(){
 		$('.warning').text(word).css('color','rgba(255, 51, 51, 1)');
 	}
 
-	function Cryotico() {
-		
+	// 暗号化
+	function Encryption(text) {
+		var rsaKey = GetRSAKey();
+		var publicKey = GetPublicKey(rsaKey);
+		console.log("元:", text);
+		console.log("result:", cryptico.encrypt(text, publicKey));
+		return cryptico.encrypt(text, publicKey);
 	}
 
 	function GetRSAKey() {
@@ -87,7 +92,7 @@ $(function(){
 
 	function GetPublicKey(RSAKey) {
 		// 公開鍵作成
-		var publicKeyString = Cryotico.publicKeyString(RSAkey);
+		var publicKeyString = cryptico.publicKeyString(RSAKey);
 		return publicKeyString;
 	}
 });
